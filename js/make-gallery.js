@@ -14,16 +14,17 @@ galleryContainer.insertAdjacentHTML('afterbegin', cardsMarkup);
 function makeGalleryCardMarkup(galleryImages) {
     return galleryImages.map(({preview, original, description}) => {
         return `
-    <div class="gallery">
-      <divs
-        class="gallery__item"
-        preview="${preview}"
-        original="${original}"
-        description="${description}"
-        style="background-color: "
-      ></div>
-    </div>
+    <li class="gallery__item">
+        <img class="gallery__image"
+            src="${preview}"
+            original="${original}"
+            description="${description}"
+            style="background-color: "
+        />
+    </li>
     `;
     })
     .join(' ');
 }
+
+{/* <img src="./images/img2.jpg" width="370" height="294" alt="дизайнеры-разрабатывают-приложения-для-смартфонов" /> */}
